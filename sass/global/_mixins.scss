@@ -1,0 +1,32 @@
+@mixin layout ($width, $class:null) {
+  @if ($class == null) {
+    .layout {
+      position: relative;
+
+      @media (min-width: $width + 22px) {
+        margin: 0 auto;
+        width: $width;
+      }
+
+      @media (max-width: $width + 21px) {
+        width: 100%;
+        padding: 0 15px;
+      }
+    }
+  }
+  @else {
+    .layout.#{$class} {
+      position: relative;
+
+      @media (min-width: $width + 22px) {
+        margin: 0 auto;
+        width: $width;
+      }
+
+      @media (max-width: $width + 21px) {
+        width: 100%;
+        padding: 0 15px;
+      }
+    }
+  }
+}
