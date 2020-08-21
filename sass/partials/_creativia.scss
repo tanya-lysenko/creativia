@@ -83,7 +83,7 @@
         display: block;
         margin-bottom: 40px;
 
-        a {
+        summary {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
@@ -120,7 +120,7 @@
 
               top: 50%;
               left: 50%;
-              transform: translateX(-50%) translateY( -50%);
+              transform: translateX(-50%) translateY(-50%);
             }
           }
 
@@ -147,11 +147,23 @@
           line-height: 22px;
           padding: 8px;
           margin-bottom: 0;
-
-          &.hidden {
-            display: none;
-          }
         }
+      }
+
+      .card summary .icon.close {
+        display: none;
+      }
+
+      .card[open] summary .icon.close {
+        display: block;
+      }
+
+      .card summary .icon.open {
+        display: block;
+      }
+
+      .card[open] summary .icon.open{
+        display: none;
       }
     }
 

@@ -99,6 +99,18 @@ input, textarea, button, select, a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+details summary::-webkit-details-marker {
+  display: none
+}
+
+details > summary {
+  list-style: none;
+}
+
+button, summary {
+  cursor: pointer;
+}
+
 /*@media*/
 
 /* @media (min-width: 1921px){} 						QHD \ UHD
