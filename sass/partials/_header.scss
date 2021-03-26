@@ -33,6 +33,34 @@
     display: block;
     overflow: hidden;
 
+    @media (max-width: 877px) {
+      text-align: center;
+    }
+
+    .menu {
+      display: none;
+
+      @media (max-width: 877px) {
+        display: inline-block;
+        padding: 24px 0;
+        min-width: 32px;
+        color: #ffffff;
+        font-family: Raleway, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.07px;
+        font-size: 18px;
+        cursor: pointer;
+
+        &:hover {
+          color: $color-active;
+        }
+
+        &[hidden] {
+          display: none;
+        }
+      }
+    }
+
     ul {
       float: right;
       display: flex;
@@ -41,6 +69,10 @@
       justify-content: space-between;
       align-items: stretch;
 
+      &[hidden] {
+        display: flex;
+      }
+
       @media (max-width: 1125px) {
         float: none;
       }
@@ -48,6 +80,10 @@
       @media (max-width: 877px) {
         flex-direction: column;
         align-items: center;
+
+        &[hidden] {
+          display: none;
+        }
       }
 
       li {
