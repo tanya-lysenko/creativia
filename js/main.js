@@ -1,5 +1,10 @@
 document.addEventListener('click', function (e) {
-    if (e.target.href === '#' || e.target.closest(`[href="#"]`)) e.preventDefault();
+    const condition1 = e.target.href === '#';
+    const condition2 = e.target.closest(`[href="#"]`);
+
+    if (condition1 || condition2) {
+        e.preventDefault();
+    }
 });
 
 const menuOpen = document.querySelector('.menu-open');
